@@ -1,4 +1,4 @@
-const RAZORPAY_KEY_ID = "rzp_test_SQpo1XZ8nSiMDO";
+const RAZORPAY_KEY_ID = "xxxxxxxxxxx"; //Add your rozorpay Key
 let paymentItemsCache = [];
 let selectedAddressCache = null;
 
