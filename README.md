@@ -56,6 +56,19 @@ ShopSphere is built using HTML, CSS, JavaScript, Bootstrap, Firebase, and Razorp
 
 ---
 
+## Output
+<img width="1262" height="836" alt="Screenshot 2026-03-31 120659" src="https://github.com/user-attachments/assets/a82eb440-e31e-4825-bc83-535b18862aa7" />
+<img width="1920" height="1080" alt="Screenshot 2026-03-20 134524" src="https://github.com/user-attachments/assets/0b79e94f-46d3-4a5a-b2e4-c068c6008060" />
+<img width="1920" height="1080" alt="Screenshot 2026-03-31 120525" src="https://github.com/user-attachments/assets/fe8df945-346d-46aa-95e3-5f2436492b82" />
+<img width="1281" height="900" alt="Screenshot 2026-03-31 120541" src="https://github.com/user-attachments/assets/cb273185-b74e-4f44-8fcb-b5e17e4cafa4" />
+<img width="1134" height="885" alt="Screenshot 2026-03-31 120600" src="https://github.com/user-attachments/assets/d27524a1-b7f4-403b-a5f5-07aaef69e3b0" />
+<img width="1386" height="907" alt="Screenshot 2026-03-31 120619" src="https://github.com/user-attachments/assets/66bf0efe-a8b2-4d97-9094-87560549fe80" />
+<img width="1315" height="871" alt="Screenshot 2026-03-31 120641" src="https://github.com/user-attachments/assets/be18272e-b11f-4c7f-829e-cad4d6e34e53" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/03e232a0-b5f1-4f89-b3c7-7fdedd359514" />
+<img width="949" height="814" alt="Screenshot 2026-03-31 120721" src="https://github.com/user-attachments/assets/b609423a-efd1-4c3a-b987-6e5fb088af06" />
+<img width="1117" height="898" alt="Screenshot 2026-03-31 120741" src="https://github.com/user-attachments/assets/9344f566-75e1-4ec7-b601-a30eeb0d4f66" />
+
+
 ## 📂 Project Structure
 
 ```text
@@ -156,9 +169,6 @@ key: "rzp_test_xxxxxxxxxx"
 ```
 
 ---
-
-## Output
-<img width="1117" height="898" alt="Screenshot 2026-03-31 120741" src="https://github.com/user-attachments/assets/21cdbcc4-0f06-4ab3-bce1-60a09bb10c1a" />
 
 ## 🌟 Future Improvements
 
