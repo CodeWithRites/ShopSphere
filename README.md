@@ -157,6 +157,9 @@ key: "rzp_test_xxxxxxxxxx"
 
 ---
 
+## Output
+<img width="1117" height="898" alt="Screenshot 2026-03-31 120741" src="https://github.com/user-attachments/assets/21cdbcc4-0f06-4ab3-bce1-60a09bb10c1a" />
+
 ## 🌟 Future Improvements
 
 * 📱 Fully responsive mobile optimization
