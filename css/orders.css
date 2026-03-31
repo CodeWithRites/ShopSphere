@@ -1,0 +1,331 @@
+.orders-page {
+    background:
+        radial-gradient(circle at top left, rgba(255, 111, 123, 0.12), transparent 24%),
+        linear-gradient(180deg, #f7f8fc, #eef2f9);
+    min-height: calc(100vh - 160px);
+}
+
+.orders-shell {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(255, 214, 220, 0.9);
+    border-radius: 30px;
+    padding: 1.5rem;
+    box-shadow: 0 20px 48px rgba(20, 24, 38, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.orders-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.orders-toolbar h1 {
+    margin-bottom: 0.45rem;
+}
+
+.orders-search-btn {
+    border-radius: 16px;
+    min-width: 180px;
+}
+
+.orders-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.order-row-card {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1.6fr) minmax(120px, 0.7fr) minmax(220px, 1fr);
+    gap: 1.2rem;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #dce2ee;
+    border-radius: 18px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 10px 24px rgba(22, 24, 34, 0.05);
+    cursor: pointer;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.order-row-card:hover {
+    transform: translateY(-3px);
+    border-color: #ffcad3;
+    box-shadow: 0 18px 32px rgba(22, 24, 34, 0.08);
+}
+
+.order-row-card__image {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 14px;
+    background: #f3f5fb;
+}
+
+.order-row-card__title {
+    font-size: 1.2rem;
+    margin-bottom: 0.45rem;
+}
+
+.order-row-card__meta,
+.order-row-card__desc {
+    color: #6d7383;
+    margin-bottom: 0.3rem;
+}
+
+.order-row-card__price {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #10131f;
+    text-align: center;
+}
+
+.order-row-card__status {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.order-row-card__status-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #1fa54a;
+    box-shadow: 0 0 0 6px rgba(31, 165, 74, 0.12);
+}
+
+.order-row-card__action {
+    color: #2a67ef;
+    font-weight: 700;
+}
+
+.orders-empty-card {
+    background: #fff;
+    border-radius: 22px;
+    border: 1px dashed #d6dce9;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: #6c7282;
+}
+
+.order-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    color: #717788;
+}
+
+.order-breadcrumb a {
+    color: #717788;
+}
+
+.order-detail-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(320px, 0.85fr);
+    gap: 1.5rem;
+}
+
+.order-detail-main,
+.order-detail-side {
+    display: grid;
+    gap: 1rem;
+}
+
+.order-detail-card,
+.order-detail-sidecard {
+    background: #fff;
+    border: 1px solid #e2e7f0;
+    border-radius: 22px;
+    box-shadow: 0 12px 28px rgba(22, 24, 36, 0.05);
+}
+
+.order-detail-card {
+    padding: 1.4rem;
+}
+
+.order-detail-sidecard {
+    padding: 1.2rem;
+}
+
+.order-detail-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 110px;
+    gap: 1rem;
+    align-items: start;
+}
+
+.order-detail-hero__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 18px;
+    object-fit: cover;
+    justify-self: end;
+}
+
+.order-detail-hero h2 {
+    font-size: 1.85rem;
+    margin-bottom: 0.45rem;
+}
+
+.order-detail-hero__meta {
+    color: #6d7383;
+    margin-bottom: 0.45rem;
+}
+
+.order-price-highlight {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #151923;
+}
+
+.order-detail-card__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.timeline-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 0.9rem;
+    align-items: start;
+}
+
+.timeline-item__icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #0f9b35;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.76rem;
+    margin-top: 0.12rem;
+}
+
+.timeline-item p {
+    margin-bottom: 0.15rem;
+    color: #6f7482;
+}
+
+.delivery-info {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.delivery-info__box {
+    background: #f8fafc;
+    border: 1px solid #edf1f7;
+    border-radius: 18px;
+    padding: 1rem;
+}
+
+.delivery-info__row {
+    display: flex;
+    align-items: start;
+    gap: 0.7rem;
+    color: #3d4352;
+}
+
+.delivery-info__row i {
+    color: #6b768e;
+    margin-top: 0.2rem;
+}
+
+.price-breakup {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.price-breakup__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    color: #4f5564;
+}
+
+.price-breakup__row.total {
+    border-top: 1px dashed #d7dce7;
+    padding-top: 0.85rem;
+    font-weight: 700;
+    color: #151923;
+    font-size: 1.05rem;
+}
+
+.invoice-btn {
+    width: 100%;
+    border-radius: 16px;
+    margin-top: 1rem;
+}
+
+.rating-experience {
+    border: 1px solid #edf1f7;
+    background: #f8fafc;
+    border-radius: 18px;
+    padding: 1.1rem;
+}
+
+.rating-experience__label {
+    color: #4d5465;
+    font-weight: 600;
+    margin-bottom: 0.9rem;
+}
+
+.rating-stars {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    color: #7b8190;
+    font-size: 1.8rem;
+}
+
+@media (max-width: 991.98px) {
+    .order-row-card {
+        grid-template-columns: 90px 1fr;
+    }
+
+    .order-row-card__price,
+    .order-row-card__status {
+        text-align: left;
+    }
+
+    .order-detail-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .orders-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .order-row-card {
+        grid-template-columns: 1fr;
+    }
+
+    .order-detail-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .order-detail-hero__img {
+        justify-self: start;
+    }
+}

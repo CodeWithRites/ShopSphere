@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ShopSphere - Discover Your Style</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="welcome-splash" id="welcomeSplash" aria-hidden="true">
+        <div class="welcome-splash__glow welcome-splash__glow--left"></div>
+        <div class="welcome-splash__glow welcome-splash__glow--right"></div>
+        <div class="welcome-splash__content">
+            <span class="welcome-splash__eyebrow">Fashion Starts Here</span>
+            <h1>Welcome To ShopSphere</h1>
+            <p>Loading your style destination...</p>
+        </div>
+    </div>
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm">
+            <div class="container nav-shell">
+                <a class="navbar-brand brand-mark" href="#">ShopSphere</a>
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <form class="search-shell mx-auto my-3 my-lg-0" role="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input id="searchInput" class="form-control border-0 shadow-none" type="search" placeholder="Search for products...">
+                    </form>
+                    <ul class="navbar-nav align-items-lg-center ms-lg-auto gap-lg-3">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item auth-login-link"><a class="nav-link" href="login.html">Login</a></li>
+                        <li class="nav-item dropdown auth-profile-menu d-none">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-regular fa-user me-1"></i>Profile
+                            </a>
+                            <ul class="dropdown-menu profile-dropdown">
+                                <li><a class="dropdown-item" href="account.html">My Account</a></li>
+                                <li><a class="dropdown-item" href="orders.html">My Orders</a></li>
+                                <li><a class="dropdown-item" href="addresses.html">My Addresses</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><button class="dropdown-item auth-logout-btn" type="button">Logout</button></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cart-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#wishlistCanvas" aria-controls="wishlistCanvas">
+                                <i class="fa-regular fa-heart me-1"></i>Wishlist
+                                <span class="cart-badge wishlist-count d-none">0</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cart-link" href="cart.html">
+                                <i class="fa-solid fa-bag-shopping me-1"></i>Add to cart
+                                <span class="cart-badge cart-count d-none">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="promo-strip">
+            <div class="container text-center">
+                <span><i class="fa-solid fa-tag me-2"></i>Get 25% Off on All Products | Use Code: SHOP25</span>
+                <a href="#" class="ms-2">Shop Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-backdrop"></div>
+            <div class="container position-relative">
+                <div class="row min-vh-hero align-items-center">
+                    <div class="col-lg-5 col-md-7">
+                        <span class="eyebrow-pill">New Season</span>
+                        <h1 class="hero-title">Discover Your Style</h1>
+                        <p class="hero-copy">Explore the latest trends in fashion with our exclusive collection.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#rising-stars" class="btn btn-primary hero-btn">Shop Now</a>
+                            <a href="#categories" class="btn btn-outline-light hero-btn">View Collection</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-hint">Scroll Down <i class="fa-solid fa-chevron-down ms-2"></i></div>
+            </div>
+        </section>
+
+        <section class="feature-strip">
+            <div class="container">
+                <div class="row g-3" id="featureGrid"></div>
+            </div>
+        </section>
+
+        <section id="categories" class="section-gap pb-4">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Our Categories</h2>
+                </div>
+                <div class="row g-4" id="categoryGrid"></div>
+            </div>
+        </section>
+
+        <section id="rising-stars" class="section-gap section-soft">
+            <div class="container">
+                <div class="section-heading d-flex justify-content-between align-items-end flex-wrap gap-3">
+                    <div>
+                        <h2>Rising Stars</h2>
+                        <p>Trending products that everyone is loving.</p>
+                    </div>
+                    <a href="#" class="section-link view-all-link" data-collection="rising-stars">View All <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="row g-4" id="risingStarsGrid"></div>
+            </div>
+        </section>
+
+        <section class="section-gap pt-2">
+            <div class="container">
+                <div class="row g-4" id="bannerGrid"></div>
+            </div>
+        </section>
+
+        <section class="section-gap pt-0 d-none" id="promoShowcase">
+            <div class="container">
+                <div class="section-heading d-flex justify-content-between align-items-end flex-wrap gap-3">
+                    <div>
+                        <h2 id="promoShowcaseTitle">Featured Picks</h2>
+                        <p id="promoShowcaseText">Curated products from the selected campaign.</p>
+                    </div>
+                    <a href="#bannerGrid" class="section-link" id="promoBackLink">Back to Offers <i class="fa-solid fa-arrow-up"></i></a>
+                </div>
+                <div class="row g-4" id="promoShowcaseGrid"></div>
+            </div>
+        </section>
+
+        <section id="luxe-grand-deals" class="section-gap">
+            <div class="container">
+                <div class="section-heading d-flex justify-content-between align-items-end flex-wrap gap-3">
+                    <div>
+                        <h2>Luxe Grand Deals</h2>
+                        <p>Premium products at unbeatable prices.</p>
+                    </div>
+                    <a href="#" class="section-link view-all-link" data-collection="luxe-deals">View All <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="row g-4" id="luxeDealsGrid"></div>
+            </div>
+        </section>
+
+        <section class="section-gap testimonial-wrap">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h2>What Our Customers Say</h2>
+                </div>
+                <div class="row g-4" id="testimonialGrid"></div>
+            </div>
+        </section>
+
+        <section class="section-gap pt-4">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Shop By Category</h2>
+                    <p>Browse your favorite categories.</p>
+                </div>
+                <div class="row g-4" id="shopCategoryGrid"></div>
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <div class="container text-center">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get exclusive deals and updates straight to your inbox.</p>
+                <form id="newsletterForm" class="newsletter-form mx-auto">
+                    <input type="email" id="newsletterEmail" class="form-control" placeholder="Enter your email" aria-label="Email address">
+                    <button class="btn newsletter-btn" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4 footer-top">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="footer-brand">ShopSphere</h3>
+                    <p>Your one-stop destination for fashion and lifestyle products.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-list">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Account</h6>
+                    <ul class="footer-list">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">My Cart</a></li>
+                        <li><a href="#" data-bs-toggle="offcanvas" data-bs-target="#wishlistCanvas" aria-controls="wishlistCanvas">Wishlist</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6>Contact</h6>
+                    <ul class="footer-contact">
+                        <li><i class="fa-regular fa-envelope"></i>support@shopsphere.com</li>
+                        <li><i class="fa-solid fa-phone"></i>+91 1234 567890</li>
+                        <li><i class="fa-solid fa-location-dot"></i>Mumbai, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2026 ShopSphere. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toastHost" class="toast-host"></div>
+
+    <div class="offcanvas offcanvas-end wishlist-panel" tabindex="-1" id="wishlistCanvas" aria-labelledby="wishlistCanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="wishlistCanvasLabel">Your Wishlist</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="wishlistContent" class="wishlist-list"></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content location-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="quickViewModalLabel">Quick View</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="quickViewImage" class="img-fluid rounded-4 mb-3" src="" alt="Product preview">
+                    <span id="quickViewTag" class="product-tag mb-2"></span>
+                    <h3 id="quickViewName"></h3>
+                    <p id="quickViewMeta" class="text-muted mb-2"></p>
+                    <div class="price-line mb-2">
+                        <span id="quickViewPrice" class="price-current"></span>
+                        <span id="quickViewOldPrice" class="price-old"></span>
+                    </div>
+                    <p id="quickViewSave" class="save-line mb-0"></p>
+                </div>
+                <div class="modal-footer border-0">
+                    <a id="quickViewLink" class="btn btn-cart" href="product.html">Open Product</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/firebase-auth.js"></script>
+    <script src="js/auth-ui.js"></script>
+    <script src="js/auth-guard.js"></script>
+    <script src="js/product-data.js"></script>
+    <script src="js/store-ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

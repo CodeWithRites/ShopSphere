@@ -1,0 +1,128 @@
+.address-page {
+    background: linear-gradient(180deg, #ffffff, #fafbfe);
+}
+
+.address-shell {
+    background: #fff;
+    border-radius: 30px;
+    border: 1px solid #f0eef2;
+    box-shadow: 0 18px 44px rgba(20, 21, 33, 0.07);
+    padding: 1.5rem;
+}
+
+.address-card {
+    border: 1px solid #eceef4;
+    border-radius: 24px;
+    padding: 1.1rem;
+    background: linear-gradient(180deg, #fff, #fcfcfe);
+}
+
+.address-card.active {
+    border-color: #ffb8c1;
+    box-shadow: 0 12px 28px rgba(255, 93, 114, 0.08);
+}
+
+.address-tag {
+    display: inline-block;
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    background: #fff1f4;
+    color: #ff4d5c;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.address-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.address-modal-dialog {
+    max-width: 760px;
+}
+
+.address-modal-content {
+    border-radius: 28px;
+    border: 1px solid rgba(247, 204, 213, 0.9);
+    box-shadow: 0 26px 70px rgba(24, 18, 34, 0.18);
+    overflow: hidden;
+}
+
+.address-modal-content .modal-header {
+    padding: 1.35rem 1.6rem 0.75rem;
+}
+
+.address-modal-content .modal-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.address-modal-content .modal-body {
+    padding: 0.5rem 1.6rem 1rem;
+}
+
+.address-modal-content .modal-footer {
+    padding: 0.5rem 1.6rem 1.5rem;
+}
+
+.address-grid-compact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.1rem;
+}
+
+.address-grid-full {
+    grid-column: 1 / -1;
+}
+
+.compact-field {
+    margin-bottom: 0;
+}
+
+.compact-field .form-control,
+.compact-select-wrap .form-control {
+    height: 56px;
+    border-radius: 18px;
+}
+
+.compact-select-wrap {
+    position: relative;
+}
+
+.compact-select-wrap select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 3.2rem !important;
+    background: linear-gradient(180deg, #fff, #fff8f9);
+}
+
+.compact-select-wrap::after {
+    content: "\f107";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 1.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7d8392;
+    pointer-events: none;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 767.98px) {
+    .address-modal-dialog {
+        max-width: calc(100% - 1rem);
+        margin: 0.5rem auto;
+    }
+
+    .address-grid-compact {
+        grid-template-columns: 1fr;
+    }
+
+    .address-modal-content .modal-title {
+        font-size: 1.45rem;
+    }
+}

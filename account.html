@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Account - ShopSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/account.css">
+</head>
+<body data-protected-page>
+    <header class="site-header sticky-top">
+        <nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm">
+            <div class="container nav-shell">
+                <a class="navbar-brand brand-mark" href="index.html">ShopSphere</a>
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#accountNav" aria-controls="accountNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="accountNav">
+                    <form class="search-shell mx-auto my-3 my-lg-0">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input class="form-control border-0 shadow-none" type="search" placeholder="Search for products, brands and more">
+                    </form>
+                    <ul class="navbar-nav align-items-lg-center ms-lg-auto gap-lg-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item auth-login-link"><a class="nav-link" href="login.html">Login</a></li>
+                        <li class="nav-item dropdown auth-profile-menu d-none">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-regular fa-user me-1"></i>Profile
+                            </a>
+                            <ul class="dropdown-menu profile-dropdown">
+                                <li><a class="dropdown-item" href="account.html">My Account</a></li>
+                                <li><a class="dropdown-item" href="orders.html">My Orders</a></li>
+                                <li><a class="dropdown-item" href="addresses.html">My Addresses</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><button class="dropdown-item auth-logout-btn" type="button">Logout</button></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cart-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#wishlistCanvas" aria-controls="wishlistCanvas">
+                                <i class="fa-regular fa-heart me-1"></i>Wishlist
+                                <span class="cart-badge wishlist-count d-none">0</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cart-link" href="cart.html">
+                                <i class="fa-solid fa-bag-shopping me-1"></i>Add to cart
+                                <span class="cart-badge cart-count d-none">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="promo-strip">
+            <div class="container text-center">
+                <span><i class="fa-solid fa-tag me-2"></i>Get 25% Off on All Products | Use Code: SHOP25</span>
+                <a href="#" class="ms-2">Shop Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="account-page">
+        <section class="section-gap pb-4">
+            <div class="container">
+                <div class="account-shell">
+                    <section class="account-hero-card">
+                        <div class="account-hero-copy">
+                            <span class="eyebrow-pill">Dashboard</span>
+                            <h1>My Account</h1>
+                            <p>Manage your profile, saved addresses, orders, and everything you need for a smooth shopping experience.</p>
+                            <div class="account-user-line">
+                                <div class="account-avatar" id="accountAvatar">S</div>
+                                <div>
+                                    <strong id="accountNameHero">ShopSphere User</strong>
+                                    <div id="accountEmailHero" class="text-muted">user@example.com</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account-hero-stats">
+                            <article class="account-stat-card">
+                                <span>Orders</span>
+                                <strong id="accountOrdersCount">0</strong>
+                                <p>Recent purchases tracked here</p>
+                            </article>
+                            <article class="account-stat-card">
+                                <span>Wishlist</span>
+                                <strong id="accountWishlistCount">0</strong>
+                                <p>Saved products ready to buy</p>
+                            </article>
+                            <article class="account-stat-card">
+                                <span>Addresses</span>
+                                <strong id="accountAddressCount">0</strong>
+                                <p>Fast checkout with saved homes</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="account-grid">
+                        <article class="account-panel">
+                            <div class="account-panel__head">
+                                <h3 class="mb-0">Profile Details</h3>
+                                <a href="profile-details.html" class="section-link mb-0">Manage Profile</a>
+                            </div>
+                            <div class="account-info-list">
+                                <div class="account-info-row">
+                                    <span>Name</span>
+                                    <strong id="accountName">ShopSphere User</strong>
+                                </div>
+                                <div class="account-info-row">
+                                    <span>Email</span>
+                                    <strong id="accountEmail">user@example.com</strong>
+                                </div>
+                                <div class="account-info-row">
+                                    <span>Member Since</span>
+                                    <strong id="accountMemberSince">2026</strong>
+                                </div>
+                                <div class="account-info-row">
+                                    <span>Primary Phone</span>
+                                    <strong id="accountPhone">Not added yet</strong>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="account-panel">
+                            <div class="account-panel__head">
+                                <h3 class="mb-0">Quick Actions</h3>
+                                <a href="orders.html" class="section-link mb-0">Open Orders</a>
+                            </div>
+                            <div class="account-action-grid">
+                                <a class="account-action-card" href="orders.html">
+                                    <i class="fa-solid fa-box-open"></i>
+                                    <h4>My Orders</h4>
+                                    <p>Open every purchase and track details.</p>
+                                </a>
+                                <a class="account-action-card" href="addresses.html">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <h4>My Addresses</h4>
+                                    <p>Manage delivery locations and edit saved addresses.</p>
+                                </a>
+                                <a class="account-action-card" href="cart.html">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                    <h4>My Cart</h4>
+                                    <p>Review cart items before payment.</p>
+                                </a>
+                                <button class="account-action-card account-action-card--button" type="button" data-bs-toggle="offcanvas" data-bs-target="#wishlistCanvas" aria-controls="wishlistCanvas">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <h4>Wishlist</h4>
+                                    <p>See all your saved favorites in one place.</p>
+                                </button>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section class="account-bottom-grid">
+                        <article class="account-panel">
+                            <div class="account-panel__head">
+                                <h3 class="mb-0">Saved Address Snapshot</h3>
+                                <a href="addresses.html" class="section-link mb-0">Edit</a>
+                            </div>
+                            <div id="accountAddressPreview" class="account-address-preview">
+                                <p class="mb-0 text-muted">Loading saved address...</p>
+                            </div>
+                        </article>
+
+                        <article class="account-panel">
+                            <div class="account-panel__head">
+                                <h3 class="mb-0">Account Highlights</h3>
+                            </div>
+                            <div class="account-highlight-list">
+                                <div class="account-highlight-item">
+                                    <i class="fa-solid fa-shield-heart"></i>
+                                    <div>
+                                        <strong>Secure Account</strong>
+                                        <p>Protected login and verified checkout experience.</p>
+                                    </div>
+                                </div>
+                                <div class="account-highlight-item">
+                                    <i class="fa-solid fa-bolt"></i>
+                                    <div>
+                                        <strong>Fast Reorder</strong>
+                                        <p>Jump back into previous purchases in one click.</p>
+                                    </div>
+                                </div>
+                                <div class="account-highlight-item">
+                                    <i class="fa-solid fa-gift"></i>
+                                    <div>
+                                        <strong>Exclusive Offers</strong>
+                                        <p>Unlock seasonal deals curated for your shopping style.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4 footer-top">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="footer-brand">ShopSphere</h3>
+                    <p>Your one-stop destination for fashion and lifestyle products.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-list">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6>Account</h6>
+                    <ul class="footer-list">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="cart.html">My Cart</a></li>
+                        <li><a href="#" data-bs-toggle="offcanvas" data-bs-target="#wishlistCanvas" aria-controls="wishlistCanvas">Wishlist</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h6>Contact</h6>
+                    <ul class="footer-contact">
+                        <li><i class="fa-regular fa-envelope"></i>support@shopsphere.com</li>
+                        <li><i class="fa-solid fa-phone"></i>+91 1234 567890</li>
+                        <li><i class="fa-solid fa-location-dot"></i>Mumbai, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p class="mb-0">&copy; 2026 ShopSphere. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="offcanvas offcanvas-end wishlist-panel" tabindex="-1" id="wishlistCanvas" aria-labelledby="wishlistCanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="wishlistCanvasLabel">Your Wishlist</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="wishlistContent" class="wishlist-list"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/firebase-auth.js"></script>
+    <script src="js/auth-ui.js"></script>
+    <script src="js/auth-guard.js"></script>
+    <script src="js/address-book.js"></script>
+    <script src="js/order-book.js"></script>
+    <script src="js/product-data.js"></script>
+    <script src="js/store-ui.js"></script>
+    <script src="js/account.js"></script>
+</body>
+</html>
